@@ -3,3 +3,7 @@ kvm:
   hosts:
     kvm-1:
       ansible_host: 192.168.1.100
+docker:
+  hosts:
+    docker-build-1:
+      ansible_host: 192.168.1.101
