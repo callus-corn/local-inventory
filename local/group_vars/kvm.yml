@@ -1,7 +1,9 @@
 ---
 
-develop_uuid: f39f3b7a-3b6b-dcbf-ba8d-b4c3e0c8d9fa
-develop_memory_KiB: 2097152
-develop_vcpu: 1
-develop_mac: 12:43:f1:a3:8c:d1
-develop_ip: 192.168.1.101
+kvm_vm_list:
+  - name: develop
+    uuid: f39f3b7a-3b6b-dcbf-ba8d-b4c3e0c8d9fa
+    memory_KiB: 2097152
+    vcpu: 1
+    mac: 12:43:f1:a3:8c:d1
+    ip: 192.168.1.101
