@@ -1,0 +1,19 @@
+---
+
+hw_list:
+  - name: kvm
+    mac: 00:0e:c6:20:23:66
+    ip: 192.168.1.100
+  - name: ap-aterm
+    mac: 80:22:a7:2b:a6:10
+    ip: 192.168.1.210
+
+vm_list:
+  - name: rocky
+    mac: 12:43:f1:a3:8c:d1
+    ip: 192.168.1.110
+    uuid: f39f3b7a-3b6b-dcbf-ba8d-b4c3e0c8d9fa
+    vcpu: 1
+    memory_KiB: 2097152
+    meta:
+      label: develop
