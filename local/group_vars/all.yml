@@ -2,18 +2,39 @@
 
 hw_list:
   - name: kvm
-    mac: 00:0e:c6:20:23:66
     ip: 192.168.1.100
-  - name: ap-aterm
-    mac: 80:22:a7:2b:a6:10
+    mac: 00:0e:c6:20:23:66
+  - name: switch
+    ip: 192.168.1.200
+  - name: ap
     ip: 192.168.1.210
+    mac: 80:22:a7:2b:a6:10
+  - name: router
+    ip: 192.168.1.254
 
 vm_list:
-  - name: rocky
-    mac: 12:43:f1:a3:8c:d1
-    ip: 192.168.1.110
-    uuid: f39f3b7a-3b6b-dcbf-ba8d-b4c3e0c8d9fa
-    vcpu: 1
-    memory_KiB: 2097152
+  - name: k8s-master
+    ip: 192.168.1.120
+    mac: 4a:ed:0a:98:f7:a8
+    uuid: db1a0b4a-80ab-8d19-ba45-41614e5e2389
+    vcpu: 2
+    memory_KiB: 41943040
     meta:
       label: develop
+  - name: k8s-worker-1
+    ip: 192.168.1.121
+    mac: 46:38:51:8e:0e:bb
+    uuid: 912a696b-6a31-3caa-f445-fc30321e7a35
+    vcpu: 2
+    memory_KiB: 41943040
+    meta:
+      label: develop
+  - name: k8s-worker-2
+    ip: 192.168.1.122
+    mac: 4e:cd:52:15:6c:6c
+    uuid: 33806c57-d55b-fed7-706d-43cd7f516aef
+    vcpu: 2
+    memory_KiB: 41943040
+    meta:
+      label: develop
+
