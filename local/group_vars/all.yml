@@ -18,7 +18,8 @@ vm_list:
     mac: 4a:ed:0a:98:f7:a8
     uuid: db1a0b4a-80ab-8d19-ba45-41614e5e2389
     vcpu: 2
-    memory_KiB: 41943040
+    memory_KiB: 4194304
+    base_os: rocky9
     meta:
       label: develop
   - name: k8s-worker-1
@@ -26,7 +27,8 @@ vm_list:
     mac: 46:38:51:8e:0e:bb
     uuid: 912a696b-6a31-3caa-f445-fc30321e7a35
     vcpu: 2
-    memory_KiB: 41943040
+    memory_KiB: 4194304
+    base_os: rocky9
     meta:
       label: develop
   - name: k8s-worker-2
@@ -34,7 +36,8 @@ vm_list:
     mac: 4e:cd:52:15:6c:6c
     uuid: 33806c57-d55b-fed7-706d-43cd7f516aef
     vcpu: 2
-    memory_KiB: 41943040
+    memory_KiB: 4194304
+    base_os: rocky9
     meta:
       label: develop
 
