@@ -19,7 +19,7 @@ vm_list:
     uuid: db1a0b4a-80ab-8d19-ba45-41614e5e2389
     vcpu: 2
     memory_KiB: 4194304
-    base_os: rocky9.0
+    base_os: ubuntu22.04
     meta:
       label: develop
   - name: k8s-worker-1
@@ -28,7 +28,7 @@ vm_list:
     uuid: 912a696b-6a31-3caa-f445-fc30321e7a35
     vcpu: 2
     memory_KiB: 4194304
-    base_os: rocky9.0
+    base_os: ubuntu22.04
     meta:
       label: develop
   - name: k8s-worker-2
@@ -37,7 +37,7 @@ vm_list:
     uuid: 33806c57-d55b-fed7-706d-43cd7f516aef
     vcpu: 2
     memory_KiB: 4194304
-    base_os: rocky9.0
+    base_os: ubuntu22.04
     meta:
       label: develop
 
