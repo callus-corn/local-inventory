@@ -3,6 +3,8 @@ kvm:
   hosts:
     kvm-1:
       ansible_host: 192.168.1.100
+    kvm-2:
+      ansible_host: 192.168.1.101
 network:
   hosts:
     network-1:
