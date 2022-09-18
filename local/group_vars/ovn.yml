@@ -25,5 +25,16 @@ util_packages_pip:
   - pyftpdlib
   - tftpy
 
-ovs_dest_dir: /tmp/ovs
-ovn_dest_dir: /tmp/ovn
+ovs_dest_dir: /opt/ovs
+ovn_dest_dir: /opt/ovn
+
+ovs_run_dir: /var/run/openvswitch
+ovn_etc_dir: /etc/ovn
+ovn_log_dir: /var/log/ovn
+ovn_run_dir: /var/run/ovn
+
+ovn_nb_db_name: ovn_nb
+ovn_sb_db_name: ovn_sb
+
+ovn_nb_port: 6641
+ovn_sb_port: 6642
