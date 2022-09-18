@@ -1,0 +1,29 @@
+---
+
+requirements_packages_dnf:
+  - git
+  - gcc
+  - autoconf
+  - automake
+  - libtool
+  - openssl-devel
+  - libcap-ng
+  - unbound
+  - python3
+  - python3-pip
+
+requirements_packages_pip:
+  - flake8
+
+util_packages_dnf:
+  - wget
+  - nc
+  - curl
+  - net-tools
+
+util_packages_pip:
+  - pyftpdlib
+  - tftpy
+
+ovs_dest_dir: /tmp/ovs
+ovn_dest_dir: /tmp/ovn
