@@ -1,15 +1,13 @@
 ---
 kvm:
-  hosts:
-    kvm-1:
-      ansible_host: 192.168.1.100
-    kvm-2:
-      ansible_host: 192.168.1.101
-network:
-  hosts:
-    network-1:
-      ansible_host: 192.168.1.100
-develop:
-  hosts:
-    develop-1:
-      ansible_host: 192.168.1.110
+  children:
+    kvm_controller:
+      hosts:
+        kvm_controller_1:
+          ansible_host: 192.168.1.100
+    kvm_worker:
+      hosts:
+        kvm_1:
+          ansible_host: 192.168.1.100
+        kvm_2:
+          ansible_host: 192.168.1.101

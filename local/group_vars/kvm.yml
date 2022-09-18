@@ -16,23 +16,33 @@ hw_list:
     ip: 192.168.1.254
 
 vm_list:
-  - name: ssh
+  - name: ovn_controller
     ip: 192.168.1.110
     mac: 4a:ed:0a:98:f7:a8
     uuid: db1a0b4a-80ab-8d19-ba45-41614e5e2389
     vcpu: 2
     memory_KiB: 4194304
-    base_os: rocky9
+    base_os: rocky9.0
     meta:
-      label: develop
-      host: kvm-1
-  - name: test
+      label: deploy
+      host: kvm_1
+  - name: ovn_host_1
     ip: 192.168.1.111
     mac: 46:38:51:8e:0e:bb
     uuid: 912a696b-6a31-3caa-f445-fc30321e7a35
     vcpu: 2
     memory_KiB: 4194304
-    base_os: rocky9
+    base_os: rocky9.0
     meta:
-      label: develop
-      host: kvm-2
+      label: deploy
+      host: kvm_1
+  - name: ovn_host_2
+    ip: 192.168.1.112
+    mac: c2:b3:3e:9b:77:f2
+    uuid: c90be494-74ac-8f29-a154-d6e51acdd1da
+    vcpu: 2
+    memory_KiB: 4194304
+    base_os: rocky9.0
+    meta:
+      label: deploy
+      host: kvm_2
