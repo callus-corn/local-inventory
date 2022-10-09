@@ -1,40 +1,91 @@
 ---
 
+# build
 requirements_packages_dnf:
   - git
+  - make
   - gcc
   - autoconf
   - automake
   - libtool
+  - systemd
+  - openssl
   - openssl-devel
-  - libcap-ng
-  - unbound
   - python3
+  - python3-devel
+  - python3-six
+  - python3-setuptools
   - python3-pip
+  - desktop-file-utils
+  - groff-base
+  - groff
+  - graphviz
+  - procps-ng
+  - libcap-ng
+  - libcap-ng-devel
+  - openssl
+  - hostname
+  - iproute
+  - libibverbs
 
 requirements_packages_pip:
-  - flake8
+  - sphinx
+  - pyOpenSSL
 
-util_packages_dnf:
-  - wget
-  - nc
-  - curl
-  - net-tools
-
-util_packages_pip:
-  - pyftpdlib
-  - tftpy
-
+# start
 ovs_dest_dir: /opt/ovs
 ovn_dest_dir: /opt/ovn
 
+ovs_etc_dir: /etc/openvswitch
+ovs_log_dir: /var/log/openvswitch
 ovs_run_dir: /var/run/openvswitch
 ovn_etc_dir: /etc/ovn
 ovn_log_dir: /var/log/ovn
 ovn_run_dir: /var/run/ovn
 
-ovn_nb_db_name: ovn_nb
-ovn_sb_db_name: ovn_sb
+ovs_vtep_db_name: vtep
+ovs_conf_db_name: conf
+ovs_db_name: db
 
+ovn_nb_db_name: ovnnb_db
+ovn_sb_db_name: ovnsb_db
+
+ovn_remote_ip: 192.168.1.110
 ovn_nb_port: 6641
 ovn_sb_port: 6642
+
+ovn_encap_type: geneve
+ovn_encap_port: 6081
+
+ovn_system_ids:
+  ovn_1: 7b4d647d-2fd9-0950-1125-fabb06be29b8
+  ovn_2: 6c782f7d-c768-6480-4548-57fd477a746a
+
+# setting
+ovn_underlay_if:
+  ovn_1: enp1s0
+  ovn_2: enp1s0
+ovn_underlay_subnet_length:
+  ovn_1: 24
+  ovn_2: 24
+ovn_br_ext: br-ext
+ovn_physical_network_name: phynet
+
+ovn_overlay_switch: sw
+ovn_overlay_switch_router_port: sw-rt
+
+ovn_public_switch: public
+ovn_public_switch_port: public-port
+ovn_public_switch_router_port: public-rt
+
+ovn_default_route: 192.168.1.254
+ovn_snat_src: 10.0.0.0/8
+ovn_router: rt
+ovn_router_overlay_switch_port: rt-sw
+ovn_router_overlay_switch_port_mac: 96:2a:9f:22:92:90
+ovn_router_overlay_switch_port_ip: 10.255.255.254
+ovn_router_overlay_switch_port_subnet_length: 8
+ovn_router_public_switch_port: rt-public
+ovn_router_public_switch_port_mac: 6a:10:b5:75:18:3e
+ovn_router_public_switch_port_ip:  192.168.1.253
+ovn_router_public_switch_port_subnet_length: 24
