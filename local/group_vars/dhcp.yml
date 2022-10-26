@@ -1,0 +1,36 @@
+---
+
+host_list:
+  - name: management
+    iface_list:
+      - ip: 192.168.1.100
+        mac: 00:0e:c6:20:23:66
+  - name: service
+    iface_list:
+      - ip: 192.168.1.101
+        mac: 48:21:0b:35:9f:b9
+  - name: switch
+    iface_list:
+      - ip: 192.168.1.200
+        mac: 00:08:2f:96:be:40
+  - name: ap
+    iface_list:
+      - ip: 192.168.1.210
+        mac: 80:22:a7:2b:a6:10
+  - name: router
+    iface_list:
+      - ip: 192.168.1.254
+        mac: 4c:e1:75:5c:bd:4b
+
+  - name: ovn_controller
+    iface_list:
+      - ip: 192.168.1.110
+        mac: 4a:ed:0a:98:f7:a8
+  - name: ovn_host_1
+    iface_list:
+      - ip: 192.168.1.111
+        mac: 46:38:51:8e:0e:bb
+  - name: ovn_host_2
+    iface_list:
+      - ip: 192.168.1.112
+        mac: c2:b3:3e:9b:77:f2  

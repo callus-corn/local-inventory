@@ -1,0 +1,13 @@
+---
+
+record_list:
+  - host: controller-1
+    ip: 192.168.1.100
+  - host: kvm-1
+    ip: 192.168.1.101
+  - host: switch
+    ip: 192.168.1.200
+  - host: ap
+    ip: 192.168.1.210
+  - host: router
+    ip: 192.168.1.254
