@@ -1,7 +1,7 @@
 ---
 
 vm_list:
-  - name: ovn_controller
+  - name: ovn_central_1
     iface_list:
       - ip: 192.168.1.110
         mac: 4a:ed:0a:98:f7:a8
@@ -10,7 +10,7 @@ vm_list:
     memory_KiB: 2097152
     base_os: rocky9.0
     meta:
-      label: deploy
+      state: deploy
       host: kvm_1
   - name: ovn_host_1
     iface_list:
@@ -21,7 +21,7 @@ vm_list:
     memory_KiB: 2097152
     base_os: rocky9.0
     meta:
-      label: deploy
+      state: deploy
       host: kvm_1
   - name: ovn_host_2
     iface_list:
@@ -32,5 +32,5 @@ vm_list:
     memory_KiB: 2097152
     base_os: rocky9.0
     meta:
-      label: deploy
+      state: deploy
       host: kvm_1

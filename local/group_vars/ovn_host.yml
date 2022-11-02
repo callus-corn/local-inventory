@@ -1,0 +1,119 @@
+---
+# build
+ovs_repo: https://github.com/openvswitch/ovs.git
+ovs_version: v3.0.0
+ovs_repo_dir: /opt/ovs
+
+ovn_repo: https://github.com/ovn-org/ovn.git
+ovn_version: v22.06.0
+ovn_repo_dir: /opt/ovn
+
+ovn_requirements_packages_dnf:
+  - name: git
+    state: latest
+  - name: make
+    state: latest
+  - name: gcc
+    state: latest
+  - name: autoconf
+    state: latest
+  - name: automake
+    state: latest
+  - name: libtool
+    state: latest
+  - name: systemd
+    state: latest
+  - name: openssl
+    state: latest
+  - name: openssl-devel
+    state: latest
+  - name: python3
+    state: latest
+  - name: python3-devel
+    state: latest
+  - name: python3-six
+    state: latest
+  - name: python3-setuptools
+    state: latest
+  - name: python3-pip
+    state: latest
+  - name: desktop-file-utils
+    state: latest
+  - name: groff-base
+    state: latest
+  - name: groff
+    state: latest
+  - name: graphviz
+    state: latest
+  - name: procps-ng
+    state: latest
+  - name: libcap-ng
+    state: latest
+  - name: libcap-ng-devel
+    state: latest
+  - name: openssl
+    state: latest
+  - name: hostname
+    state: latest
+  - name: iproute
+    state: latest
+  - name: libibverbs
+    state: latest
+
+ovn_requirements_packages_pip:
+  - sphinx==5.3.0
+  - pyOpenSSL==22.1.0
+
+# start_ovs
+ovs_etc_dir: /etc/openvswitch
+ovs_log_dir: /var/log/openvswitch
+ovs_run_dir: /var/run/openvswitch
+
+ovs_vtep_db_name: vtep
+ovs_conf_db_name: conf
+ovs_db_name: db
+
+ovs_vtep_schema_file_path: "{{ ovs_repo_dir }}/vtep/vtep.ovsschema"
+ovs_conf_schema_file_path: "{{ ovs_repo_dir }}/vswitchd/vswitch.ovsschema"
+
+default_ifname:
+  ovn_host_1: enp1s0
+  ovn_host_2: enp1s0
+default_subnet_length:
+  ovn_host_1: 24
+  ovn_host_2: 24
+ovs_bridge: br-ext
+
+
+# start
+ovn_etc_dir: /etc/ovn
+ovn_log_dir: /var/log/ovn
+ovn_run_dir: /var/run/ovn
+
+ovn_remote_ip: 192.168.1.110
+ovn_nb_port: 6641
+ovn_sb_port: 6642
+
+ovn_encap_type: geneve
+ovn_encap_port: 6081
+
+ovn_system_ids:
+  ovn_host_1: 7b4d647d-2fd9-0950-1125-fabb06be29b8
+  ovn_host_2: 6c782f7d-c768-6480-4548-57fd477a746a
+
+ovn_physical_network_name: phynet
+
+# setting
+
+ovn_router_port:
+  overlay:
+    name: rt-sw
+    mac: 96:2a:9f:22:92:90
+    ip: 10.255.255.254
+    subnet_length: 8
+  public:
+    name: rt-public
+    mac: 6a:10:b5:75:18:3e
+    ip: 192.168.1.253
+    subnet_length: 24
+
