@@ -1,0 +1,54 @@
+---
+
+subnet: 10.0.0.0
+netmask: 255.0.0.0
+
+broadcast_address: 10.255.255.255
+routers: 10.255.255.254
+domain_name_servers: 10.0.0.2
+interface_mtu: 1400
+range: 10.0.0.200 10.0.0.254
+
+host_list:
+  - name: dhcp
+    iface_list:
+      - ip: 10.0.0.1
+        mac: 4a:ed:0a:98:f7:a8
+  - name: dns
+    iface_list:
+      - ip: 10.0.0.2
+        mac: 4a:a5:72:29:f8:eb
+  - name: docker_1
+    iface_list:
+      - ip: 10.0.0.10
+        mac: 96:02:d6:38:03:c8
+  - name: k8s_controller_1
+    iface_list:
+      - ip: 10.0.0.20
+        mac: f6:fa:ac:b2:b8:7a
+  - name: k8s_worker_1
+    iface_list:
+      - ip: 10.0.0.30
+        mac: 2a:26:da:52:c4:de
+  - name: k8s_worker_2
+    iface_list:
+      - ip: 10.0.0.31
+        mac: d2:08:72:ee:1d:76
+
+  # test vm
+  - name: r1
+    iface_list:
+      - ip: 10.10.0.1
+        mac: 46:38:51:8e:0e:bb
+  - name: r2
+    iface_list:
+      - ip: 10.10.0.2
+        mac: 5a:73:02:a8:f5:ff
+  - name: u1
+    iface_list:
+      - ip: 10.20.0.1
+        mac: 2a:7a:b8:15:7c:6a
+  - name: u2
+    iface_list:
+      - ip: 10.20.0.2
+        mac: 6a:11:26:40:0b:d4

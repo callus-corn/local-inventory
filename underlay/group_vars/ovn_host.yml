@@ -77,8 +77,8 @@ ovs_vtep_schema_file_path: "{{ ovs_repo_dir }}/vtep/vtep.ovsschema"
 ovs_conf_schema_file_path: "{{ ovs_repo_dir }}/vswitchd/vswitch.ovsschema"
 
 default_ifname:
-  ovn_host_1: enp1s0
-  ovn_host_2: enp1s0
+  ovn_host_1: enp86s0
+  ovn_host_2: enp86s0
 default_subnet_length:
   ovn_host_1: 24
   ovn_host_2: 24
@@ -90,7 +90,7 @@ ovn_etc_dir: /etc/ovn
 ovn_log_dir: /var/log/ovn
 ovn_run_dir: /var/run/ovn
 
-ovn_remote_ip: 192.168.1.110
+ovn_remote_ip: 192.168.1.100
 ovn_nb_port: 6641
 ovn_sb_port: 6642
 
@@ -104,6 +104,7 @@ ovn_system_ids:
 ovn_physical_network_name: phynet
 
 # setting
+ovn_default_route: 192.168.1.254
 
 ovn_router_port:
   overlay:

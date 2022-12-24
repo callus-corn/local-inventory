@@ -12,16 +12,18 @@ dns:
 kvm:
   hosts:
     kvm_1:
-      ansible_host: 192.168.1.101
+      ansible_host: 192.168.1.110
+    kvm_2:
+      ansible_host: 192.168.1.111
 
 ovn_central:
   hosts:
     ovn_central_1:
-      ansible_host: 192.168.1.110
+      ansible_host: 192.168.1.100
 
 ovn_host:
   hosts:
     ovn_host_1:
-      ansible_host: 192.168.1.111
+      ansible_host: 192.168.1.110
     ovn_host_2:
-      ansible_host: 192.168.1.112
+      ansible_host: 192.168.1.111

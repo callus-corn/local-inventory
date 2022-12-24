@@ -1,14 +1,27 @@
 ---
 
+subnet: 192.168.1.0
+netmask: 255.255.255.0
+
+broadcast_address: 192.168.1.255
+routers: 192.168.1.254
+domain_name_servers: 192.168.1.100
+interface_mtu: 1500
+range: 192.168.1.10 192.168.1.99
+
 host_list:
-  - name: management
+  - name: controller-1
     iface_list:
       - ip: 192.168.1.100
         mac: 00:0e:c6:20:23:66
-  - name: service
+  - name: kvm-1
     iface_list:
-      - ip: 192.168.1.101
+      - ip: 192.168.1.110
         mac: 48:21:0b:35:9f:b9
+  - name: kvm-2
+    iface_list:
+      - ip: 192.168.1.111
+        mac: 48:21:0b:37:ae:a1
   - name: switch
     iface_list:
       - ip: 192.168.1.200
@@ -21,16 +34,3 @@ host_list:
     iface_list:
       - ip: 192.168.1.254
         mac: 4c:e1:75:5c:bd:4b
-
-  - name: ovn_controller
-    iface_list:
-      - ip: 192.168.1.110
-        mac: 4a:ed:0a:98:f7:a8
-  - name: ovn_host_1
-    iface_list:
-      - ip: 192.168.1.111
-        mac: 46:38:51:8e:0e:bb
-  - name: ovn_host_2
-    iface_list:
-      - ip: 192.168.1.112
-        mac: c2:b3:3e:9b:77:f2  

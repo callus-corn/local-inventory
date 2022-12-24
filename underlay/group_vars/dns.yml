@@ -1,0 +1,31 @@
+---
+local_address: "192.168.1.100 fe80::192:168:1:100%enp0s20u7"
+
+record_list:
+  - host: storage-1
+    ip: 192.168.1.1
+  - host: controller-1
+    ip: 192.168.1.100
+  - host: kvm-1
+    ip: 192.168.1.110
+  - host: kvm-2
+    ip: 192.168.1.111
+  - host: switch
+    ip: 192.168.1.200
+  - host: ap
+    ip: 192.168.1.210
+  - host: router
+    ip: 192.168.1.254
+
+  - host: dhcp.cloud
+    ip: 10.0.0.1
+  - host: dns.cloud
+    ip: 10.0.0.2
+  - host: docker_1.cloud
+    ip: 10.0.0.10
+  - host: k8s_controller_1.cloud
+    ip: 10.0.0.20
+  - host: k8s_worker_1.cloud
+    ip: 10.0.0.30
+  - host: k8s_worker_2.cloud
+    ip: 10.0.0.31
