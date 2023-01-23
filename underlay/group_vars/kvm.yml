@@ -5,7 +5,7 @@ ovn_nb_port: 6641
 ovn_nb_db: "tcp:{{ ovn_remote_ip }}:{{ ovn_nb_port }}"
 
 vm_list:
-  # production
+  # infra: 10.0.0.0/24
   - name: dhcp
     iface_list:
       - ip: 10.0.0.1
@@ -34,16 +34,18 @@ vm_list:
     meta:
       state: production
       host: kvm_1
+  
+  # service: 10.0.10.0/24
 
-  # deploy
+  # backend: 10.0.20.0/24
   - name: docker_1
     iface_list:
-      - ip: 10.0.0.10
-        mac: 96:02:d6:38:03:c8
-        ovs_id: 6cf58d2d-4968-1889-4b03-97fb30f3d513
+      - ip: 10.0.20.10
+        mac: 8e:d9:5c:3c:14:e4
+        ovs_id: d7513d45-7ca5-9371-0f33-26619a86162b
         ovn_switch: sw
         ovn_router: rt
-    uuid: bfb6e8b7-2270-eb94-d990-9010bd4f0849
+    uuid: ff3947be-914b-2af2-7b03-93b3d65ca1ef
     vcpu: 2
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: ubuntu22.04
@@ -52,12 +54,12 @@ vm_list:
       host: kvm_1
   - name: k8s_controller_1
     iface_list:
-      - ip: 10.0.0.20
-        mac: f6:fa:ac:b2:b8:7a
-        ovs_id: 5e4b3deb-6174-bbbd-3c34-f5263a2bb83c
+      - ip: 10.0.20.20
+        mac: 42:fb:e9:1f:be:78
+        ovs_id: 209baa95-d0de-2391-a503-750dd71d63dc
         ovn_switch: sw
         ovn_router: rt
-    uuid: 9cf5aa9f-f71c-629a-102d-0a9af3be2cf9
+    uuid: bb93cb52-6780-22a4-0294-23ea1fa84bdb
     vcpu: 4
     memory_KiB: "{{ 8 * 1024 * 1024 }}"
     base_os: ubuntu22.04
@@ -66,12 +68,12 @@ vm_list:
       host: kvm_2
   - name: k8s_worker_1
     iface_list:
-      - ip: 10.0.0.30
-        mac: 2a:26:da:52:c4:de
-        ovs_id: c252d100-48e6-df03-b81b-683d848847b0
+      - ip: 10.0.20.30
+        mac: de:d7:e2:00:f2:19
+        ovs_id: 575124fd-b4b4-028a-894b-0bf2c1f06e25
         ovn_switch: sw
         ovn_router: rt
-    uuid: cf801bcd-f2c8-6a27-7f30-88da7bc7c239
+    uuid: f06b6034-6ed3-02ab-14b5-cc1dc613fcd5
     vcpu: 4
     memory_KiB: "{{ 8 * 1024 * 1024 }}"
     base_os: ubuntu22.04
@@ -80,12 +82,12 @@ vm_list:
       host: kvm_1
   - name: k8s_worker_2
     iface_list:
-      - ip: 10.0.0.31
-        mac: d2:08:72:ee:1d:76
-        ovs_id: 368db65a-9e9d-eca6-b22a-7f18488a39a7
+      - ip: 10.0.20.31
+        mac: aa:d1:03:f1:6e:a8
+        ovs_id: a918d292-8b41-3d9d-921d-ff0bff05ed59
         ovn_switch: sw
         ovn_router: rt
-    uuid: b151e2c9-770a-6075-780d-5e1bf617ab72
+    uuid: 9d7095fc-c609-974f-6fb6-893b789a6b65
     vcpu: 4
     memory_KiB: "{{ 8 * 1024 * 1024 }}"
     base_os: ubuntu22.04
@@ -93,7 +95,7 @@ vm_list:
       state: none
       host: kvm_2
 
-  # test VM
+  # rocky: 10.10.0.0/24
   - name: rocky_big_1
     iface_list:
       - ip: 10.10.0.1
@@ -122,6 +124,8 @@ vm_list:
     meta:
       state: none
       host: kvm_2
+
+  # ubuntu: 10.20.0.0/24
   - name: ubuntu_big_1
     iface_list:
       - ip: 10.20.0.1
@@ -150,3 +154,62 @@ vm_list:
     meta:
       state: none
       host: kvm_2
+
+
+  # deprecated
+  # - name: docker_1
+  #   iface_list:
+  #     - ip: 10.0.0.10
+  #       mac: 96:02:d6:38:03:c8
+  #       ovs_id: 6cf58d2d-4968-1889-4b03-97fb30f3d513
+  #       ovn_switch: sw
+  #       ovn_router: rt
+  #   uuid: bfb6e8b7-2270-eb94-d990-9010bd4f0849
+  #   vcpu: 2
+  #   memory_KiB: "{{ 4 * 1024 * 1024 }}"
+  #   base_os: ubuntu22.04
+  #   meta:
+  #     state: none
+  #     host: kvm_1
+  # - name: k8s_controller_1
+  #   iface_list:
+  #     - ip: 10.0.0.20
+  #       mac: f6:fa:ac:b2:b8:7a
+  #       ovs_id: 5e4b3deb-6174-bbbd-3c34-f5263a2bb83c
+  #       ovn_switch: sw
+  #       ovn_router: rt
+  #   uuid: 9cf5aa9f-f71c-629a-102d-0a9af3be2cf9
+  #   vcpu: 4
+  #   memory_KiB: "{{ 8 * 1024 * 1024 }}"
+  #   base_os: ubuntu22.04
+  #   meta:
+  #     state: none
+  #     host: kvm_2
+  # - name: k8s_worker_1
+  #   iface_list:
+  #     - ip: 10.0.0.30
+  #       mac: 2a:26:da:52:c4:de
+  #       ovs_id: c252d100-48e6-df03-b81b-683d848847b0
+  #       ovn_switch: sw
+  #       ovn_router: rt
+  #   uuid: cf801bcd-f2c8-6a27-7f30-88da7bc7c239
+  #   vcpu: 4
+  #   memory_KiB: "{{ 8 * 1024 * 1024 }}"
+  #   base_os: ubuntu22.04
+  #   meta:
+  #     state: none
+  #     host: kvm_1
+  # - name: k8s_worker_2
+  #   iface_list:
+  #     - ip: 10.0.0.31
+  #       mac: d2:08:72:ee:1d:76
+  #       ovs_id: 368db65a-9e9d-eca6-b22a-7f18488a39a7
+  #       ovn_switch: sw
+  #       ovn_router: rt
+  #   uuid: b151e2c9-770a-6075-780d-5e1bf617ab72
+  #   vcpu: 4
+  #   memory_KiB: "{{ 8 * 1024 * 1024 }}"
+  #   base_os: ubuntu22.04
+  #   meta:
+  #     state: none
+  #     host: kvm_2

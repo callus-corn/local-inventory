@@ -22,10 +22,10 @@ record_list:
   - host: dns.cloud
     ip: 10.0.0.2
   - host: docker_1.cloud
-    ip: 10.0.0.10
+    ip: 10.0.20.10
   - host: k8s_controller_1.cloud
-    ip: 10.0.0.20
+    ip: 10.0.20.20
   - host: k8s_worker_1.cloud
-    ip: 10.0.0.30
+    ip: 10.0.20.30
   - host: k8s_worker_2.cloud
-    ip: 10.0.0.31
+    ip: 10.0.20.31
