@@ -94,7 +94,7 @@ vm_list:
       host: kvm_2
 
   # test VM
-  - name: r1
+  - name: rocky_big_1
     iface_list:
       - ip: 10.10.0.1
         mac: 46:38:51:8e:0e:bb
@@ -102,13 +102,13 @@ vm_list:
         ovn_switch: sw
         ovn_router: rt
     uuid: 3b6346a3-99fe-4aea-62e1-b75d4a85df57
-    vcpu: 1
-    memory_KiB: "{{ 2 * 1024 * 1024 }}"
+    vcpu: 4
+    memory_KiB: "{{ 16 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
       state: none
       host: kvm_1
-  - name: r2
+  - name: rocky_big_2
     iface_list:
       - ip: 10.10.0.2
         mac: 5a:73:02:a8:f5:ff
@@ -116,13 +116,13 @@ vm_list:
         ovn_switch: sw
         ovn_router: rt
     uuid: 17ba4b69-0dcc-0ef1-7549-3885abe5b01c
-    vcpu: 1
-    memory_KiB: "{{ 2 * 1024 * 1024 }}"
+    vcpu: 4
+    memory_KiB: "{{ 16 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
       state: none
       host: kvm_2
-  - name: u1
+  - name: ubuntu_big_1
     iface_list:
       - ip: 10.20.0.1
         mac: 2a:7a:b8:15:7c:6a
@@ -136,7 +136,7 @@ vm_list:
     meta:
       state: deploy
       host: kvm_1
-  - name: u2
+  - name: ubuntu_big_2
     iface_list:
       - ip: 10.20.0.2
         mac: 6a:11:26:40:0b:d4
@@ -144,8 +144,8 @@ vm_list:
         ovn_switch: sw
         ovn_router: rt
     uuid: 5e966a7d-ad15-431a-3125-ab8ce8619bda
-    vcpu: 1
-    memory_KiB: "{{ 2 * 1024 * 1024 }}"
+    vcpu: 4
+    memory_KiB: "{{ 16 * 1024 * 1024 }}"
     base_os: ubuntu22.04
     meta:
       state: none
