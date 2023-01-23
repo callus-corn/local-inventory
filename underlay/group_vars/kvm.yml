@@ -138,7 +138,7 @@ vm_list:
     memory_KiB: "{{ 16 * 1024 * 1024 }}"
     base_os: ubuntu22.04
     meta:
-      state: deploy
+      state: none
       host: kvm_1
   - name: ubuntu_big_2
     iface_list:
