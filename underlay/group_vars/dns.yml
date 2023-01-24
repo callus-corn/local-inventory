@@ -21,11 +21,7 @@ record_list:
     ip: 10.0.0.1
   - host: dns.cloud
     ip: 10.0.0.2
-  - host: docker_1.cloud
-    ip: 10.0.20.10
-  - host: k8s_controller_1.cloud
-    ip: 10.0.20.20
-  - host: k8s_worker_1.cloud
-    ip: 10.0.20.30
-  - host: k8s_worker_2.cloud
-    ip: 10.0.20.31
+  - host: www.minio.cloud
+    ip: 10.0.10.10
+  - host: api.minio.cloud
+    ip: 10.0.10.11

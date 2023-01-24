@@ -10,6 +10,7 @@ interface_mtu: 1400
 range: 10.0.0.200 10.0.0.254
 
 host_list:
+  # infra
   - name: dhcp
     iface_list:
       - ip: 10.0.0.1
@@ -18,22 +19,16 @@ host_list:
     iface_list:
       - ip: 10.0.0.2
         mac: 4a:a5:72:29:f8:eb
-  - name: docker_1
+
+  # front
+  - name: front_minio_web
     iface_list:
-      - ip: 10.0.0.10
-        mac: 96:02:d6:38:03:c8
-  - name: k8s_controller_1
+      - ip: 10.0.10.10
+        mac: 62:9b:cf:69:30:b3
+  - name: front_minio_api
     iface_list:
-      - ip: 10.0.0.20
-        mac: f6:fa:ac:b2:b8:7a
-  - name: k8s_worker_1
-    iface_list:
-      - ip: 10.0.0.30
-        mac: 2a:26:da:52:c4:de
-  - name: k8s_worker_2
-    iface_list:
-      - ip: 10.0.0.31
-        mac: d2:08:72:ee:1d:76
+      - ip: 10.0.10.11
+        mac: 0a:b5:eb:23:57:3f
 
   # test vm
   - name: r1

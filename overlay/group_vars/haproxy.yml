@@ -1,0 +1,13 @@
+---
+
+haproxy_list:
+  - hostname: minio_web
+    backend_servers:
+      - hostname: minio_web
+        ip: 10.10.0.1
+        port: 9090
+  - hostname: minio_api
+    backend_servers:
+      - hostname: minio_api
+        ip: 10.10.0.1
+        port: 9000

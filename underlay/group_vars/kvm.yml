@@ -34,24 +34,67 @@ vm_list:
     meta:
       state: production
       host: kvm_1
-  
-  # service: 10.0.10.0/24
 
-  # backend: 10.0.20.0/24
-  - name: docker_1
+  - name: docker_repo
     iface_list:
-      - ip: 10.0.20.10
+      - ip: 10.0.0.3
         mac: 8e:d9:5c:3c:14:e4
         ovs_id: d7513d45-7ca5-9371-0f33-26619a86162b
         ovn_switch: sw
         ovn_router: rt
     uuid: ff3947be-914b-2af2-7b03-93b3d65ca1ef
-    vcpu: 2
-    memory_KiB: "{{ 4 * 1024 * 1024 }}"
+    vcpu: 1
+    memory_KiB: "{{ 2 * 1024 * 1024 }}"
     base_os: ubuntu22.04
     meta:
       state: none
+      host: kvm_2
+  - name: yum_repo
+    iface_list:
+      - ip: 10.0.0.4
+        mac: ce:2f:97:d7:a9:ba
+        ovs_id: dd2b15a0-be35-fca0-7310-2abc56b05783
+        ovn_switch: sw
+        ovn_router: rt
+    uuid: d3e8868d-d768-4746-2519-98108914d047
+    vcpu: 1
+    memory_KiB: "{{ 2 * 1024 * 1024 }}"
+    base_os: rocky9.0
+    meta:
+      state: none
+      host: kvm_2
+
+  # service: 10.0.10.0/24
+  - name: front_minio_web
+    iface_list:
+      - ip: 10.0.10.10
+        mac: 62:9b:cf:69:30:b3
+        ovs_id: 45010ea9-640e-be92-a244-324a5b6a7e27
+        ovn_switch: sw
+        ovn_router: rt
+    uuid: c2194830-f8a7-a3f7-2347-3b37ed84df69
+    vcpu: 2
+    memory_KiB: "{{ 4 * 1024 * 1024 }}"
+    base_os: rocky9.0
+    meta:
+      state: production
       host: kvm_1
+  - name: front_minio_api
+    iface_list:
+      - ip: 10.0.10.11
+        mac: 0a:b5:eb:23:57:3f
+        ovs_id: 30f1aa5b-744c-b69b-3256-81d901a4d951
+        ovn_switch: sw
+        ovn_router: rt
+    uuid: faae9b3c-ad4e-acc3-2aef-8dcaaaece71f
+    vcpu: 2
+    memory_KiB: "{{ 4 * 1024 * 1024 }}"
+    base_os: rocky9.0
+    meta:
+      state: production
+      host: kvm_2
+
+  # backend: 10.0.20.0/24
   - name: k8s_controller_1
     iface_list:
       - ip: 10.0.20.20
@@ -108,7 +151,7 @@ vm_list:
     memory_KiB: "{{ 16 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: none
+      state: deploy
       host: kvm_1
   - name: rocky_big_2
     iface_list:
