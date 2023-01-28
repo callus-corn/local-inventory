@@ -17,10 +17,6 @@ record_list:
   - host: router
     ip: 192.168.1.254
 
-  - host: dhcp.cloud
-    ip: 10.0.0.1
-  - host: dns.cloud
-    ip: 10.0.0.2
   - host: www.minio.cloud
     ip: 10.0.10.10
   - host: api.minio.cloud
