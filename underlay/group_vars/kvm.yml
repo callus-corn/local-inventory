@@ -108,7 +108,7 @@ vm_list:
       host: kvm_2
 
   # backend: 10.0.20.0/24
-  - name: ca_1
+  - name: aia_1
     iface_list:
       - ip: 10.0.20.1
         mac: b6:5b:43:82:b2:6b

@@ -1,8 +1,16 @@
 ---
-ca_ca_dir: /etc/pki/CA
-ca_ica_dir: /etc/pki/ICA
 ca_cert_dir: /opt/cert
+
+ca_ca_dir: /etc/pki/CA
+ca_ca_key_file: ca.key
+ca_ca_cnf_file: ca.cnf
+ca_ca_crt_file: ca.crt
 ca_ca_extensions: ca_ext
+
+ca_ica_dir: /etc/pki/ICA
+ca_ica_key_file: ica.key
+ca_ica_cnf_file: ica.cnf
+ca_ica_crt_file: ica.crt
 ca_ica_extensions: ica_ext
 
 ca_cert_list:

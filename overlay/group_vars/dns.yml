@@ -16,7 +16,7 @@ record_list:
     ip: 10.0.10.11
 
   # back
-  - host: ca_1
+  - host: aia_1
     ip: 10.0.20.1
 
   # test
