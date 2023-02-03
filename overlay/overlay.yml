@@ -10,6 +10,11 @@ dns:
     dns_1:
       ansible_host: 10.0.0.2
 
+ca:
+  hosts:
+    ca_1:
+      ansible_host: 10.0.0.4
+
 haproxy:
   hosts:
     minio_web:

@@ -1,0 +1,12 @@
+---
+ansible_cert_src_dir: /opt/cert
+
+ansible_ca_dir: "{{ ansible_cert_src_dir }}/ca"
+ansible_ca_key_file: ca.key
+ansible_ca_cnf_file: ca.cnf
+ansible_ca_crt_file: ca.crt
+
+ansible_ica_dir: "{{ ansible_cert_src_dir }}/ica"
+ansible_ica_key_file: ica.key
+ansible_ica_cnf_file: ica.cnf
+ansible_ica_crt_file: ica.crt

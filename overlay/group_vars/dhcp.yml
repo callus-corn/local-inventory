@@ -23,8 +23,16 @@ host_list:
     iface_list:
       - ip: 10.0.0.3
         mac: 86:97:14:21:02:c6
+  - name: ca
+    iface_list:
+      - ip: 10.0.0.4
+        mac: 0e:79:13:4d:b5:0f
 
   # front
+  - name: front_ca
+    iface_list:
+      - ip: 10.0.10.1
+        mac: e2:8e:eb:ff:41:86
   - name: front_minio_web
     iface_list:
       - ip: 10.0.10.10
@@ -33,6 +41,12 @@ host_list:
     iface_list:
       - ip: 10.0.10.11
         mac: 0a:b5:eb:23:57:3f
+
+  # back
+  - name: ca_1
+    iface_list:
+      - ip: 10.0.20.1
+        mac: b6:5b:43:82:b2:6b
 
   # test vm
   - name: r1

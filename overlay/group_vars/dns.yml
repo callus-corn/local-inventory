@@ -7,10 +7,18 @@ record_list:
   - host: dns
     ip: 10.0.0.2
 
-  - host: minio-1
-    ip: 10.10.0.1
-
+  # front
+  - host: ca.cloud
+    ip: 10.0.10.1
   - host: www.minio.cloud
     ip: 10.0.10.10
   - host: api.minio.cloud
     ip: 10.0.10.11
+
+  # back
+  - host: ca_1
+    ip: 10.0.20.1
+
+  # test
+  - host: minio_1
+    ip: 10.10.0.1

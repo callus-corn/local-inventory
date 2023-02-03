@@ -1,0 +1,11 @@
+---
+ca_ca_dir: /etc/pki/CA
+ca_ica_dir: /etc/pki/ICA
+ca_cert_dir: /opt/cert
+ca_ca_extensions: ca_ext
+ca_ica_extensions: ica_ext
+
+ca_cert_list:
+  - www.minio.cloud.localdomain
+  - api.minio.cloud.localdomain
+  - minio_1.localdomain
