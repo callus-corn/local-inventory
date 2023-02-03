@@ -60,7 +60,7 @@ vm_list:
     memory_KiB: "{{ 2 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: deploy
+      state: production
       host: kvm_1
 
   # service: 10.0.10.0/24
