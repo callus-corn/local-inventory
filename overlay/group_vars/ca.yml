@@ -16,4 +16,4 @@ ca_ica_extensions: ica_ext
 ca_cert_list:
   - www.minio.cloud.localdomain
   - api.minio.cloud.localdomain
-  - minio_1.localdomain
+  - minio-1.localdomain

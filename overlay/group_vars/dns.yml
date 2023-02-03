@@ -16,9 +16,9 @@ record_list:
     ip: 10.0.10.11
 
   # back
-  - host: aia_1
+  - host: aia-1
     ip: 10.0.20.1
 
   # test
-  - host: minio_1
+  - host: minio-1
     ip: 10.10.0.1
