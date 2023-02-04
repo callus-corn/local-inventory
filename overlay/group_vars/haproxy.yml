@@ -7,7 +7,7 @@ haproxy_list:
     ssl: false
     backend_servers:
       - hostname: aia-1
-        ip: 10.10.0.1
+        ip: 10.0.20.1
         port: 80
         ssl: false
   - hostname: minio_web
