@@ -1,5 +1,5 @@
 ---
-
+# infra
 dhcp:
   hosts:
     dhcp_1:
@@ -15,8 +15,17 @@ ca:
     ca_1:
       ansible_host: 10.0.0.4
 
+# backend
+aia:
+  hosts:
+    aia_1:
+      ansible_host: 10.0.20.1
+
+# frontend
 haproxy:
   hosts:
+    ca_web:
+      ansible_host: 10.0.10.1
     minio_web:
       ansible_host: 10.0.10.10
     minio_api:
