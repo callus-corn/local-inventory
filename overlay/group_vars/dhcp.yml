@@ -41,12 +41,28 @@ host_list:
     iface_list:
       - ip: 10.0.10.11
         mac: 0a:b5:eb:23:57:3f
+  - name: front_k8s
+    iface_list:
+      - ip: 10.0.10.20
+        mac: ea:2d:bd:59:f2:f4
 
   # back
   - name: ca_1
     iface_list:
       - ip: 10.0.20.1
         mac: b6:5b:43:82:b2:6b
+  - name: k8s_controller_1
+    iface_list:
+      - ip: 10.0.20.20
+        mac: 42:fb:e9:1f:be:78
+  - name: k8s_worker_1
+    iface_list:
+      - ip: 10.0.20.30
+        mac: de:d7:e2:00:f2:19
+  - name: k8s_worker_2
+    iface_list:
+      - ip: 10.0.20.31
+        mac: aa:d1:03:f1:6e:a8
 
   # test vm
   - name: r1
@@ -57,6 +73,10 @@ host_list:
     iface_list:
       - ip: 10.10.0.2
         mac: 5a:73:02:a8:f5:ff
+  - name: rocky_small_1
+    iface_list:
+      - ip: 10.10.0.20
+        mac: aa:02:ee:d4:0f:4a
   - name: u1
     iface_list:
       - ip: 10.20.0.1

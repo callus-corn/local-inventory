@@ -2,13 +2,13 @@
 local_address: "192.168.1.100 fe80::192:168:1:100%enp0s20u7"
 
 record_list:
-  - host: storage_1
+  - host: storage-1
     ip: 192.168.1.1
-  - host: controller_1
+  - host: controller-1
     ip: 192.168.1.100
-  - host: kvm_1
+  - host: kvm-1
     ip: 192.168.1.110
-  - host: kvm_2
+  - host: kvm-2
     ip: 192.168.1.111
   - host: switch
     ip: 192.168.1.200
@@ -23,3 +23,5 @@ record_list:
     ip: 10.0.10.10
   - host: api.minio.cloud
     ip: 10.0.10.11
+  - host: api.k8s.cloud
+    ip: 10.0.10.20
