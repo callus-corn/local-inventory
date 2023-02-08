@@ -1,0 +1,25 @@
+---
+k8s_kernel_modules:
+  - overlay
+  - br_netfilter
+
+k8s_kernel_params:
+  - name: net.bridge.bridge-nf-call-iptables
+    value: 1
+  - name: net.bridge.bridge-nf-call-ip6tables
+    value: 1
+  - name: net.ipv4.ip_forward
+    value: 1
+
+k8s_cri: containerd
+k8s_containerd_requirement_packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg
+  - lsb-release
+
+k8s_kubeadm_requirement_packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl

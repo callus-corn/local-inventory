@@ -220,7 +220,7 @@ vm_list:
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: deploy
+      state: minio
       host: kvm_2
 
   # ubuntu: 10.20.0.0/24
