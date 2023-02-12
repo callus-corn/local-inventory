@@ -17,3 +17,4 @@ ca_cert_list:
   - www.minio.cloud.localdomain
   - api.minio.cloud.localdomain
   - minio-1.localdomain
+  - api.k8s.cloud.localdomain
