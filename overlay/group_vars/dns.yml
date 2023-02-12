@@ -15,7 +15,7 @@ record_list:
   - host: api.minio.cloud
     ip: 10.0.10.11
   - host: api.k8s.cloud
-    ip: 10.0.10.11
+    ip: 10.0.10.20
 
   # back
   - host: aia-1

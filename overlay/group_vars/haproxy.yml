@@ -4,7 +4,11 @@ haproxy_cert_dir: /opt/cert
 haproxy_list:
   - hostname: ca_web
     fqdn: ca.cloud.localdomain
+    mode: http
+    port: 80
     ssl: false
+    backend:
+      mode: http
     backend_servers:
       - hostname: aia-1
         ip: 10.0.20.1
@@ -12,7 +16,11 @@ haproxy_list:
         ssl: false
   - hostname: minio_web
     fqdn: www.minio.cloud.localdomain
+    mode: http
+    port: 80
     ssl: true
+    backend:
+      mode: http
     backend_servers:
       - hostname: minio-1
         ip: 10.10.0.20
@@ -20,7 +28,11 @@ haproxy_list:
         ssl: true
   - hostname: minio_api
     fqdn: api.minio.cloud.localdomain
+    mode: http
+    port: 80
     ssl: true
+    backend:
+      mode: http
     backend_servers:
       - hostname: minio-1
         ip: 10.10.0.20
@@ -28,7 +40,11 @@ haproxy_list:
         ssl: true
   - hostname: k8s_controller
     fqdn: api.k8s.cloud.localdomain
-    ssl: true
+    mode: tcp
+    port: 6443
+    ssl: false
+    backend:
+      mode: tcp
     backend_servers:
       - hostname: k8s_controller_1
         ip: 10.0.0.20
