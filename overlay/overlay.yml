@@ -42,3 +42,5 @@ haproxy:
       ansible_host: 10.0.10.10
     minio_api:
       ansible_host: 10.0.10.11
+    k8s_api:
+      ansible_host: 10.0.10.20
