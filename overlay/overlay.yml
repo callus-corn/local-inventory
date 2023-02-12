@@ -4,12 +4,10 @@ dhcp:
   hosts:
     dhcp_1:
       ansible_host: 10.0.0.1
-
 dns:
   hosts:
     dns_1:
       ansible_host: 10.0.0.2
-
 ca:
   hosts:
     ca_1:
@@ -20,18 +18,10 @@ aia:
   hosts:
     aia_1:
       ansible_host: 10.0.20.1
-k8s:
-  children:
-    k8s_controller:
-      hosts:
-        k8s_controller_1:
-          ansible_host: 10.0.20.20
-    k8s_worker:
-      hosts:
-        k8s_worker_1:
-          ansible_host: 10.0.20.30
-        k8s_worker_2:
-          ansible_host: 10.0.20.31
+minio:
+  hosts:
+    minio_1:
+      ansible_host: 10.0.20.10
 
 # frontend
 haproxy:
@@ -42,5 +32,3 @@ haproxy:
       ansible_host: 10.0.10.10
     minio_api:
       ansible_host: 10.0.10.11
-    k8s_api:
-      ansible_host: 10.0.10.20

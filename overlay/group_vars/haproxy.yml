@@ -23,7 +23,7 @@ haproxy_list:
       mode: http
     backend_servers:
       - hostname: minio-1
-        ip: 10.10.0.20
+        ip: 10.0.20.10
         port: 9090
         ssl: true
   - hostname: minio_api
@@ -35,18 +35,7 @@ haproxy_list:
       mode: http
     backend_servers:
       - hostname: minio-1
-        ip: 10.10.0.20
+        ip: 10.0.20.10
         port: 9000
         ssl: true
-  - hostname: k8s_api
-    fqdn: api.k8s.cloud.localdomain
-    mode: tcp
-    port: 6443
-    ssl: false
-    backend:
-      mode: tcp
-    backend_servers:
-      - hostname: k8s_controller_1
-        ip: 10.0.20.20
-        port: 6443
-        ssl: false
+
