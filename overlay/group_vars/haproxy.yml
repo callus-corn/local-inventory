@@ -47,6 +47,6 @@ haproxy_list:
       mode: tcp
     backend_servers:
       - hostname: k8s_controller_1
-        ip: 10.0.0.20
+        ip: 10.0.20.20
         port: 6443
         ssl: false
