@@ -18,7 +18,7 @@ vm_list:
     memory_KiB: "{{ 2 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_1
   - name: dns
     iface_list:
@@ -32,7 +32,7 @@ vm_list:
     memory_KiB: "{{ 2 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_1
   - name: ansible
     iface_list:
@@ -46,7 +46,7 @@ vm_list:
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_2
   - name: ca
     iface_list:
@@ -60,7 +60,7 @@ vm_list:
     memory_KiB: "{{ 2 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_1
 
   # service: 10.0.10.0/24
@@ -76,7 +76,7 @@ vm_list:
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_1
   - name: front_minio_web
     iface_list:
@@ -90,7 +90,7 @@ vm_list:
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_1
   - name: front_minio_api
     iface_list:
@@ -104,7 +104,7 @@ vm_list:
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_2
 
   # backend: 10.0.20.0/24
@@ -120,7 +120,7 @@ vm_list:
     memory_KiB: "{{ 2 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_1
   - name: minio_1
     iface_list:
@@ -134,7 +134,7 @@ vm_list:
     memory_KiB: "{{ 4 * 1024 * 1024 }}"
     base_os: rocky9.0
     meta:
-      state: production
+      state: none
       host: kvm_2
 
   # rocky: 10.10.0.0/24
@@ -168,7 +168,7 @@ vm_list:
       expand_partition: /dev/sda2
       expand_lv: /dev/rl/root
     meta:
-      state: deploy
+      state: none
       host: kvm_2
 
   # ubuntu: 10.20.0.0/24
